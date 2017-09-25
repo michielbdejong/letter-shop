@@ -1,0 +1,22 @@
+{
+  "name": "letter-shop",
+  "version": "1.0.0",
+  "description": "an example shop where you can pay via Interledger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michielbdejong/letter-shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michielbdejong/letter-shop/issues"
+  },
+  "homepage": "https://github.com/michielbdejong/letter-shop#readme",
+  "dependencies": {
+    "ilp-plugin-xrp-escrow": "github:michielbdejong/ilp-plugin-xrp-escrow#3fadeb4"
+  }
+}
