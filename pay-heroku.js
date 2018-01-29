@@ -10,7 +10,7 @@ async function run () {
     .pay(2000) // pays _up to_ 2000 base units of your ledger, as configured for ilp-plugin
 
   console.log(res.body)
-  // -> { message: 'Hello World!' }
+  // -> { message: 'Your letter: ...' }
 }
 
 run()
