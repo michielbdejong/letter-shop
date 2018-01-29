@@ -20,12 +20,13 @@ const plugin = new Plugin({
 plugin.connect().then(() => {
   console.log('Now run `PORT=' + process.env.PORT + ' node ./pay.js`')
 })
-
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 const price = 1000
 const ilp = new Ilp({ plugin })
 router.options('/', ilp.options({ price }))
 router.get('/', ilp.paid({ price }), async ctx => {
-  ctx.body = { message: 'Hello World!' }
+  const letter = letters[(Math.floor(Math.random() * 26))]
+  ctx.body = { message: 'Your letter: ' + letter }
 })
 
 const app = new Koa()
