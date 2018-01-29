@@ -26,7 +26,7 @@ const ilp = new Ilp({ plugin })
 router.options('/', ilp.options({ price }))
 router.get('/', ilp.paid({ price }), async ctx => {
   const letter = letters[(Math.floor(Math.random() * 26))]
-  ctx.body = 'Your letter: ' + letter
+  ctx.body = { message: 'Your letter: ' + letter }
 })
 
 const app = new Koa()
