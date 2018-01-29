@@ -1,5 +1,11 @@
-## testing gh-pages themes:
+# letter-shop
+an example shop where you can pay via Interledger
 
-```js
-123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 
+Usage:
+
+```sh
+npm install
+PORT=8000 npm start
+# in a separate terminal window:
+PORT=8000 node ./pay.js
 ```

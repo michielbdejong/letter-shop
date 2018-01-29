@@ -4,7 +4,8 @@
   "description": "an example shop where you can pay via Interledger",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=* node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,14 @@
   },
   "homepage": "https://github.com/michielbdejong/letter-shop#readme",
   "dependencies": {
-    "ilp-plugin-xrp-escrow": "github:michielbdejong/ilp-plugin-xrp-escrow#3fadeb4"
+    "ilp-plugin-mini-accounts": "^3.2.3",
+    "ilp-plugin-xrp-escrow": "github:michielbdejong/ilp-plugin-xrp-escrow#3fadeb4",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-ilp": "^1.0.0",
+    "koa-router": "^7.3.0"
+  },
+  "devDependencies": {
+    "superagent-ilp": "^0.2.0"
   }
 }
