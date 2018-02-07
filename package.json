@@ -18,14 +18,13 @@
   },
   "homepage": "https://github.com/michielbdejong/letter-shop#readme",
   "dependencies": {
-    "ilp-plugin-mini-accounts": "^3.2.3",
+    "ilp-plugin-btp": "^1.1.7",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
     "koa-ilp": "^1.0.0",
     "koa-router": "^7.3.0"
   },
   "devDependencies": {
-    "ilp-plugin-btp": "^1.1.6",
     "superagent-ilp": "^0.2.0"
   },
   "engines": {

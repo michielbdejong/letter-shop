@@ -3,22 +3,15 @@ const Koa = require('koa')
 const router = require('koa-router')()
 const parser = require('koa-bodyparser')()
 const Ilp = require('koa-ilp')
-const Plugin = require('ilp-plugin-mini-accounts')
+const Plugin = require('ilp-plugin-btp')
 
 const server = http.createServer()
 server.listen(process.env.PORT)
 const plugin = new Plugin({
-  wsOpts: {
-    server
-  },
-  debugHostIldcpInfo: {
-    clientAddress: 'g.letter-shop',
-    assetScale: 6,
-    assetCode: 'XRP'
-  }
+  server: `btp+wss://:${process.env.TOKEN}@amundsen.ilpdemo.org:1801/`
 })
 plugin.connect().then(() => {
-  console.log('Now run `PORT=' + process.env.PORT + ' node ./pay.js`')
+  console.log('Now use `moneyd --testnet` + ilp-curl https://letter-shop-testnet.herokuapp.com/ to buy a letter!')
 })
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 const price = 1000
