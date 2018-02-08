@@ -3,12 +3,14 @@ const Koa = require('koa')
 const router = require('koa-router')()
 const parser = require('koa-bodyparser')()
 const Ilp = require('koa-ilp')
-const Plugin = require('ilp-plugin-btp')
+const Plugin = require('ilp-plugin-xrp-asym-client')
 
 const server = http.createServer()
 server.listen(process.env.PORT)
 const plugin = new Plugin({
-  server: `btp+wss://:${process.env.TOKEN}@amundsen.ilpdemo.org:1801/`
+  server: `btp+wss://:${process.env.TOKEN}@amundsen.ilpdemo.org:1801/`,
+  xrpServer: 'wss://s.altnet.rippletest.net:51233',
+  secret: process.env.SECRET
 })
 plugin.connect().then(() => {
   console.log('Now use `moneyd --testnet` + ilp-curl https://letter-shop-testnet.herokuapp.com/ to buy a letter!')
