@@ -3,7 +3,7 @@ const Koa = require('koa')
 const router = require('koa-router')()
 const parser = require('koa-bodyparser')()
 const Ilp = require('koa-ilp')
-const Plugin = require('ilp-plugin-mini-accounts')
+const Plugin = require('ilp-plugin-btp')
 
 const server = http.createServer()
 server.listen(process.env.PORT)
