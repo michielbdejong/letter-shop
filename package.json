@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/michielbdejong/letter-shop#readme",
   "dependencies": {
-    "ilp-plugin-xrp-asym-client": "^1.1.1",
+    "ilp-plugin-mini-accounts": "^3.4.0",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
     "koa-ilp": "^1.0.0",
