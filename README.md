@@ -1,4 +1,7 @@
 # letter-shop
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/michielbdejong/letter-shop.svg)](https://greenkeeper.io/)
+
 an example shop where you can pay via Interledger
 
 Usage:
